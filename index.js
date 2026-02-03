@@ -8,9 +8,16 @@ class TaxCalculator{
     
     calculate(){
         if(this.exempt){
-            return calculateExempt(1.37);
+            return this.#calculateExempt(1.37);
         }else{
-            return calculateNonExempt(5.72);
+            return this.#calculateNonExempt(5.72);
         }
     }
+    #calculateExempt(amount) {
+        returns amount * this.#rate;
+    }
+}
+
+#calculateNonExempt(amount) {
+    return amount * (this.rate / 100);
 }
