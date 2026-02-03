@@ -1,4 +1,5 @@
 class TaxCalculator{
+    #rate = 15;
     
     constructor(){
         this.rate = 15;
@@ -14,7 +15,7 @@ class TaxCalculator{
         }
     }
     #calculateExempt(amount) {
-        returns amount * this.#rate;
+        return amount * this.#rate;
     }
 }
 
